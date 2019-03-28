@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1
+namespace projLivroLista
 {
     class Emprestimo
     {
@@ -13,17 +13,25 @@ namespace ConsoleApp1
 
         public Emprestimo()
         {
-            this.dtEmprestimo = DateTime.Today;
+            this.dtEmprestimo = new DateTime();
         }
+
+        public Emprestimo(DateTime dtEmprestimo)
+        {
+            this.dtEmprestimo = dtEmprestimo;
+        }
+
         public DateTime DtEmprestimo
         {
-            get { return this.dtEmprestimo; }
+            get{ return this.dtEmprestimo;  }
             set { this.dtEmprestimo = value; }
         }
+
         public DateTime DtDevolucao
         {
             get { return this.dtDevolucao; }
             set { this.dtDevolucao = value; }
         }
+
     }
 }
